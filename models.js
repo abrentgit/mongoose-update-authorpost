@@ -21,6 +21,7 @@ var blogPostSchema = mongoose.Schema({
   comments: [commentSchema]
 });
 
+
 blogPostSchema.pre('find', function(next) {
   this.populate('author');
   next();
